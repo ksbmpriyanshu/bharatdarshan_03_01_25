@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "589181892074",
+    "project_id": "bharatdarshanapp-c7e7b",
+    "storage_bucket": "bharatdarshanapp-c7e7b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589181892074:android:266b86defb74e26ecaae93",
+        "android_client_info": {
+          "package_name": "com.ksbm.bharatdarshanuserapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT3F8A_D0zPYapVwYX06xtn4xgj8_cfB8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
