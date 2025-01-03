@@ -7,13 +7,14 @@ import { useNavigation } from '@react-navigation/native';
 import * as CommonActions from '../../redux/actions/CommonActions';
 import RenderHtml from 'react-native-render-html';
 import { connect } from 'react-redux';
+import { ScrollView } from 'react-native-gesture-handler';
 
-const AboutUs = ({aboutData,dispatch}) => {
+const AboutUs = ({ aboutData, dispatch }) => {
   const navigation = useNavigation()
   useEffect(() => {
     dispatch(CommonActions.getAboutData())
   }, [])
-console.log("aboutData",aboutData)
+  console.log("aboutData", aboutData)
   const content = aboutData?.results?.aboutUs || '';
 
   const tagsStyles = {
@@ -28,7 +29,7 @@ console.log("aboutData",aboutData)
     h2: {
       ...Fonts._14MontserratRegular,
       marginBottom: 10,
-      fontSize:20,
+      fontSize: 20,
     },
   };
   const preprocessHtml = (html) => {
@@ -37,21 +38,24 @@ console.log("aboutData",aboutData)
   return (
     <View style={{ flex: 1 }}>
       {headerInfo()}
-      <View style={{ flex: 1,padding:10,}}>
-        {/* <Text style={{ color: 'black', fontFamily: 'Montserrat-Regular' }}>About Us is Comming Soon..</Text> */}
-        <RenderHtml contentWidth={300} source={{ html: preprocessHtml(content) }}
-          tagsStyles={tagsStyles} />
-      </View>
+      <ScrollView>
+        <View style={{ flex: 1, padding: 10, }}>
+          {/* <Text style={{ color: 'black', fontFamily: 'Montserrat-Regular' }}>About Us is Comming Soon..</Text> */}
+          <RenderHtml contentWidth={300} source={{ html: preprocessHtml(content) }}
+            tagsStyles={tagsStyles} />
+        </View>
+      </ScrollView>
+
     </View>
   )
-  
+
   function headerInfo() {
     return (
       <View style={{ flexDirection: 'row', alignItems: 'center', padding: Sizes.fixHorizontalPadding * 2, backgroundColor: Colors.primaryTheme }}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image source={require('../../assests/icons/back_arrow.png')} style={{ width: 24, height: 24, resizeMode: 'contain' }} tintColor={Colors.white} />
         </TouchableOpacity>
-        <Text style={{ ...Fonts._16MontserratMedium, marginLeft: Sizes.fixHorizontalPadding * 2,color:"#fff" }}>About Us</Text>
+        <Text style={{ ...Fonts._16MontserratMedium, marginLeft: Sizes.fixHorizontalPadding * 2, color: "#fff" }}>About Us</Text>
       </View>
     )
   }

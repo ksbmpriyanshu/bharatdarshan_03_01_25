@@ -105,6 +105,15 @@ import DailyDarshan from '../screens/religious/DailyDarshan';
 import Consultant from '../screens/religious/consultant/Consultant';
 import FlightBooking from '../screens/webview/FlightBooking';
 import HotelBooking from '../screens/webview/HotelBooking';
+import BusBooking from '../screens/webview/BusBooking';
+import RegistrationWeb from '../screens/webview/RegistrationWeb';
+import HomeWeb from '../screens/webview/HomeWeb';
+import RechargeWeb from '../screens/webview/RechargeWeb';
+import ElectricityWeb from '../screens/webview/ElectricityWeb';
+import DthWeb from '../screens/webview/DthWeb';
+import GasWeb from '../screens/webview/GasWeb';
+import FasttagWeb from '../screens/webview/FasttagWeb';
+import HistoryWeb from '../screens/webview/HistoryWeb';
 
 
 const Stack = createNativeStackNavigator();
@@ -228,6 +237,15 @@ const StackNavigation = () => {
           {/* webview */}
           <Stack.Screen name='flightbooking' component={FlightBooking} />
           <Stack.Screen name='hotelbooking' component={HotelBooking} />
+          <Stack.Screen name='busbooking' component={BusBooking} />
+          <Stack.Screen name='registrationweb' component={RegistrationWeb} />
+          <Stack.Screen name='homeweb' component={HomeWeb} />
+          <Stack.Screen name='rechargeweb' component={RechargeWeb} />
+          <Stack.Screen name='electricityweb' component={ElectricityWeb} />
+          <Stack.Screen name='dthweb' component={DthWeb} />
+          <Stack.Screen name='gasweb' component={GasWeb} />
+          <Stack.Screen name='fasttagweb' component={FasttagWeb} />
+          <Stack.Screen name='historyweb' component={HistoryWeb} />
 
     </Stack.Navigator>
 

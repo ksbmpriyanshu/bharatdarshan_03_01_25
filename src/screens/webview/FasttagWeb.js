@@ -6,14 +6,14 @@ import { Colors, SCREEN_WIDTH } from '../../assests/style';
 import { useNavigation } from '@react-navigation/native';
 
 
-const HotelBooking = () => {
+const FasttagWeb = () => {
   const navigation = useNavigation();
 
   return (
       <View style={styles.container}>
         <Header title={'Welcome to BharatDharshan'} tintColor={Colors.white} />
         <WebView
-          source={{ uri: 'https://www.patialamart.com/hotel-booking' }}
+          source={{ uri: 'https://www.patialamart.com/billpay?type=Fastag' }}
           style={styles.webview}
           javaScriptEnabled={true}
           domStorageEnabled={true}
@@ -35,7 +35,7 @@ const HotelBooking = () => {
   );
 };
 
-export default HotelBooking;
+export default FasttagWeb;
 
 const styles = StyleSheet.create({
   container: {

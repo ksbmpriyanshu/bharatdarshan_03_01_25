@@ -5,8 +5,7 @@ import Header from '../../components/Header';
 import { Colors, SCREEN_WIDTH } from '../../assests/style';
 import { useNavigation } from '@react-navigation/native';
 
-
-const FlightBooking = () => {
+const HistoryWeb = () => {
   const navigation = useNavigation();
 
 
@@ -15,7 +14,7 @@ const FlightBooking = () => {
     <View style={styles.container}>
       <Header title={'Welcome to BharatDharshan'} tintColor={Colors.white} />
       <WebView
-        source={{ uri: 'https://www.patialamart.com/flight-booking' }}
+        source={{ uri: 'https://www.patialamart.com/b2c/public/view/myaccount.php' }}
         style={styles.webview}
         javaScriptEnabled={true}
         domStorageEnabled={true}
@@ -37,7 +36,7 @@ const FlightBooking = () => {
   );
 };
 
-export default FlightBooking;
+export default HistoryWeb;
 
 const styles = StyleSheet.create({
   container: {

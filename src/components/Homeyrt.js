@@ -19,13 +19,23 @@ const Homeyrt = ({ title, data }) => {
         <TouchableOpacity style={{ backgroundColor:'#FFF6F1', borderRadius: 100, marginHorizontal: Sizes.fixHorizontalPadding, marginTop: Sizes.fixPadding * 0.7, overflow: 'hidden' ,paddingHorizontal:Sizes.fixPadding*0.6,paddingVertical:7}}
           onPress={() => {
             if (item?.value === 'Bus') {
-              showToastMessage({ message: "Coming Soon" });
+              navigate('busbooking');
             } else if (item?.value === 'flightForm') {
               navigate('flightbooking'); 
+            } else if (item?.value === 'Recharge') {
+              navigate('rechargeweb'); 
             } else if (item?.value === 'HotelSearch') {
               navigate('hotelbooking');
+            } else if (item?.value === 'Electricity') {
+              navigate('electricityweb'); 
+            } else if (item?.value === 'Dth') {
+              navigate('dthweb'); 
+            } else if (item?.value === 'gasOperators') {
+              navigate('gasweb'); 
+            } else if (item?.value === 'Fasttag') {
+              navigate('fasttagweb'); 
             } else {
-              navigate(item.value); // Default navigation
+              navigate(item.value); 
             }
           }}
         >

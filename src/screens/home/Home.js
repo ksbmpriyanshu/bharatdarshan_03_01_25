@@ -67,6 +67,18 @@ const Home = ({ dispatch, bannerdata, customerdata, addtocartdata }) => {
                                             navigation.navigate('hotelbooking')
                                         }}
                                     />
+
+                                    <Button title={'Bus Booking'}
+                                        onPress={() => {
+                                            navigation.navigate('busbooking')
+                                        }}
+                                    />
+
+                                    <Button title={'Recharge'}
+                                        onPress={() => {
+                                            navigation.navigate('busbooking')
+                                        }}
+                                    />
                                 </View>
                             </View>
                         </View>
